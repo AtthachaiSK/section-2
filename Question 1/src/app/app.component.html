@@ -1,0 +1,21 @@
+<div class="body">
+  <div class="container">
+    <div class="col-1">
+      <input
+        #roundInput
+        [ngModel]="value | roundPipe | number: '1.0-0'"
+        (ngModelChange)="value = $event"
+        type="number"
+      />
+    </div>
+    <div id="style-1" class="col-2">
+      <select [(ngModel)]="calculateType">
+        <option>isPrime</option>
+        <option>isFibonacci</option>
+      </select>
+    </div>
+    <div class="col-3">
+      {{ calculation }}
+    </div>
+  </div>
+</div>
